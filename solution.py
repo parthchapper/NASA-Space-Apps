@@ -32,11 +32,11 @@ plt.figure(figsize=(10, 6))
 
 # Plot the STA/LTA ratio for data below the threshold
 below_threshold = sta_lta_ratio_normalized <= threshold
-plt.plot(data[time_column][below_threshold], sta_lta_ratio_normalized[below_threshold], label='STA/LTA Below Threshold', color='green')
+plt.plot(data[time_column][below_threshold], sta_lta_ratio_normalized[below_threshold], label='STA/LTA Below Threshold', color='blue')
 
 # Plot the STA/LTA ratio for seismic events (above the threshold)
 above_threshold = sta_lta_ratio_normalized > threshold
-plt.plot(data[time_column][above_threshold], sta_lta_ratio_normalized[above_threshold], label='STA/LTA Above Threshold', color='blue')
+plt.plot(data[time_column][above_threshold], sta_lta_ratio_normalized[above_threshold], label='STA/LTA Above Threshold', color='green')
 
 # Mark the seismic events
 plt.scatter(seismic_events, [threshold] * len(seismic_events), color='red', label='Seismic Events', zorder=5)
