@@ -1,3 +1,4 @@
+# You will need to install pandas and matplot.pyplot for the code to work
 import pandas as pd
 import matplotlib.pyplot as plt
 
